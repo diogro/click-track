@@ -6,13 +6,13 @@ def main(inputFile):
     avgList = []
     time = 0;
     output = []
-    sum = 0
+    acumulator = 0
     for beat in beats:
         time += beat.duration
         avg = runningAverage(avgList, beat.duration)
-        sum += avg
+        acumulator = acumulator + avg
         output.append((time, avg))
-        base = sum / len(output)
+        base = acumulator / len(output)
         for d in output:
             print d[0], d[1] - base
 
