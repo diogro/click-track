@@ -6,6 +6,7 @@
 # Packages
 *.egg
 *.egg-info
+mykey.txt
 dist
 build
 eggs
